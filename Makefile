@@ -18,7 +18,7 @@ install: make-bcache probe-bcache bcache-super-show
 #	$(INSTALL) -m0755 bcache-test $(DESTDIR)${PREFIX}/sbin/
 
 clean:
-	$(RM) -f make-bcache probe-bcache bcache-super-show bcache-test -- *.o
+	$(RM) -f make-bcache probe-bcache bcache-super-show bcache-test bcache-register -- *.o
 
 bcache-test: LDLIBS += `pkg-config --libs openssl` -lm
 make-bcache: LDLIBS += `pkg-config --libs uuid blkid`
